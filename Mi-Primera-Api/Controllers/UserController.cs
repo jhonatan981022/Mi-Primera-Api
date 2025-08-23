@@ -3,8 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Mi_Primera_Api.Controllers
 {
-    //sdvsdvds
-    //sdfbvsdbsdbsdbdsb
     [ApiController]
     [Route("[controller]")]
     public class UserController : ControllerBase
@@ -25,7 +23,7 @@ namespace Mi_Primera_Api.Controllers
 
         [HttpPost]
         [Route("CreateUser")]
-        public ActionResult<RequestUser> CreateUser(RequestUser requestUser)
+        public ActionResult<ResponseUser> CreateUser(RequestUser requestUser)
         {
             if (requestUser.Edad < 0)
             {
@@ -41,8 +39,7 @@ namespace Mi_Primera_Api.Controllers
 
             users.Add(responseUser);
             return Ok(responseUser);
-            //sdvsdvds
-            
+         
         }
     }
 }
